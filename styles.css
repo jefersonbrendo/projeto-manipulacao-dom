@@ -142,6 +142,19 @@ ul {
     line-height: 20px;
 }
 
+.botao-remover {
+    background: darkred;
+    color: white;
+    border: none;
+    padding: 2px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.botao-remover:hover {
+    background: red;
+}
+
 .item-lista-button {
     border: none;
     background-color: transparent;

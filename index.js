@@ -3,6 +3,19 @@ const listaDeCompras = document.getElementById("lista-de-compras");
 const botaoAdicionar = document.getElementById("adicionar-item");
 let contador = 0;
 
+const mensagemListaVazia = document.querySelector(".mensagem-lista-vazia");
+
+function verificarListaVazia() {
+    const itensDaLista = listaDeCompras.querySelectorAll("li");
+    if (itensDaLista.length === 0) {
+        mensagemListaVazia.style.display = "block";
+    } else {
+        mensagemListaVazia.style.display = "none";
+    }
+}
+
+
+
 botaoAdicionar.addEventListener("click", (evento) => {
     evento.preventDefault();
     if (inputItem.value === "") {
@@ -25,6 +38,7 @@ inputCheckbox.addEventListener("click", () => {
     } else {
         nomeItem.style.textDecoration = "none";
     }
+    
 })
     
     
@@ -50,5 +64,9 @@ inputCheckbox.addEventListener("click", () => {
 
     listaDeCompras.appendChild(itemDalista);
 
+    verificarListaVazia();
+
     inputItem.value = '';
 })
+
+
